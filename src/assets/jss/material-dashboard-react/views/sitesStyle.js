@@ -5,7 +5,7 @@ import {
   hexToRgb
 } from "assets/jss/material-dashboard-react.js";
 
-const iconsStyle = {
+const sitesStyle = {
   iframe: {
     width: "100%",
     height: "500px",
@@ -43,4 +43,4 @@ const iconsStyle = {
   }
 };
 
-export default iconsStyle;
+export default sitesStyle;

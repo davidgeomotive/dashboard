@@ -90,18 +90,15 @@ const sidebarStyle = theme => ({
       color: whiteColor
     }
   },
-  logoLinkRTL: {
-    textAlign: "right"
-  },
   logoImage: {
-    width: "30px",
+    width: "100%",
     display: "inline-block",
     maxHeight: "30px",
     marginLeft: "10px",
     marginRight: "15px"
   },
   img: {
-    width: "35px",
+    width: "75%",
     top: "22px",
     position: "absolute",
     verticalAlign: "middle",

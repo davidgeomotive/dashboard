@@ -14,12 +14,13 @@ const useStyles = makeStyles(styles);
 
 export default function Card(props) {
   const classes = useStyles();
-  const { className, children, plain, profile, chart, ...rest } = props;
+  const { className, children, plain, profile, chart, site, ...rest } = props;
   const cardClasses = classNames({
     [classes.card]: true,
     [classes.cardPlain]: plain,
     [classes.cardProfile]: profile,
     [classes.cardChart]: chart,
+    [classes.cardSite]: site,
     [className]: className !== undefined
   });
   return (

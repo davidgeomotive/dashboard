@@ -1,97 +1,51 @@
 // @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
-import Person from "@material-ui/icons/Person";
-import LibraryBooks from "@material-ui/icons/LibraryBooks";
-import BubbleChart from "@material-ui/icons/BubbleChart";
-import LocationOn from "@material-ui/icons/LocationOn";
-import Notifications from "@material-ui/icons/Notifications";
-import Unarchive from "@material-ui/icons/Unarchive";
-import Language from "@material-ui/icons/Language";
+import Person from '@material-ui/icons/Person';
+import GroupIcon from '@material-ui/icons/Group';
 // core components/views for Admin layout
-import DashboardPage from "views/Dashboard/Dashboard.js";
-import UserProfile from "views/UserProfile/UserProfile.js";
-import TableList from "views/TableList/TableList.js";
-import Typography from "views/Typography/Typography.js";
-import Icons from "views/Icons/Icons.js";
-import Maps from "views/Maps/Maps.js";
-import NotificationsPage from "views/Notifications/Notifications.js";
-import Demo from "views/Demo/Demo.js";
-// core components/views for RTL layout
-import RTLPage from "views/RTLPage/RTLPage.js";
+import UserProfile from 'views/UserProfile/UserProfile.js';
+import Team from 'views/Team/Team.js';
+// import Dashboard from '@material-ui/icons/Dashboard';
+// import LibraryBooks from '@material-ui/icons/LibraryBooks';
+// import TableList from 'views/TableList/TableList.js';
+// import Sites from 'views/Sites/Sites.js';
+// import DashboardPage from 'views/Dashboard/Dashboard.js';
 
 const dashboardRoutes = [
+  // {
+  //   path: '/dashboard',
+  //   name: 'Data',
+  //   icon: Dashboard,
+  //   component: DashboardPage,
+  //   layout: '/admin',
+  // },
+  // {
+  //   path: '/sites',
+  //   name: 'Sites',
+  //   icon: LibraryBooks,
+  //   component: Sites,
+  //   layout: '/admin',
+  // },
   {
-    path: "/dashboard",
-    name: "Dashboard",
-    rtlName: "لوحة القيادة",
-    icon: Dashboard,
-    component: DashboardPage,
-    layout: "/admin"
+    path: '/team',
+    name: 'Team',
+    icon: GroupIcon,
+    component: Team,
+    layout: '/admin',
   },
   {
-    path: "/user",
-    name: "User Profile",
-    rtlName: "ملف تعريفي للمستخدم",
+    path: '/user',
+    name: 'User Profile',
     icon: Person,
     component: UserProfile,
-    layout: "/admin"
+    layout: '/admin',
   },
-  {
-    path: "/table",
-    name: "Table List",
-    rtlName: "قائمة الجدول",
-    icon: "content_paste",
-    component: TableList,
-    layout: "/admin"
-  },
-  {
-    path: "/typography",
-    name: "Typography",
-    rtlName: "طباعة",
-    icon: LibraryBooks,
-    component: Typography,
-    layout: "/admin"
-  },
-  {
-    path: "/icons",
-    name: "Icons",
-    rtlName: "الرموز",
-    icon: BubbleChart,
-    component: Icons,
-    layout: "/admin"
-  },
-  {
-    path: "/maps",
-    name: "Maps",
-    rtlName: "خرائط",
-    icon: LocationOn,
-    component: Maps,
-    layout: "/admin"
-  },
-  {
-    path: "/notifications",
-    name: "Notifications",
-    rtlName: "إخطارات",
-    icon: Notifications,
-    component: NotificationsPage,
-    layout: "/admin"
-  },
-  {
-    path: "/rtl-page",
-    name: "RTL Support",
-    rtlName: "پشتیبانی از راست به چپ",
-    icon: Language,
-    component: RTLPage,
-    layout: "/rtl"
-  },
-  {
-    path: "/demo",
-    name: "Demo",
-    rtlName: "التطور للاحترافية",
-    icon: Unarchive,
-    component: Demo,
-    layout: "/admin"
-  }
+  // {
+  //   path: '/table',
+  //   name: 'Table List',
+  //   icon: 'content_paste',
+  //   component: TableList,
+  //   layout: '/admin',
+  // },
 ];
 
 export default dashboardRoutes;

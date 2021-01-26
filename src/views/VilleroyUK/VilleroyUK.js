@@ -81,7 +81,7 @@ const CustomSkinMap = withScriptjs(
   ))
 );
 
-export default function Maps() {
+export default function VilleroyUK() {
   return (
     <CustomSkinMap
       googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
