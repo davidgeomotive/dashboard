@@ -432,6 +432,24 @@ const sendChart = {
 };
 
 // ##############################
+// // // Personalized content pie
+// #############################
+
+const personalizedPieChart = {
+  data: {
+    // labels: ['First', 'Buyer', 'Comparer', 'Researcher', 'Inspirational'],
+    series: [304, 3630, 3498, 122, 1231],
+  },
+  options: {
+    donut: false,
+    startAngle: 270,
+  },
+  labelInterpolationFnc: function (value) {
+    return value[0];
+  },
+};
+
+// ##############################
 // // // Baseline Content
 // #############################
 
@@ -548,4 +566,5 @@ module.exports = {
   conversionsChart,
   conversionsPercentChart,
   conversionsLiftChart,
+  personalizedPieChart,
 };

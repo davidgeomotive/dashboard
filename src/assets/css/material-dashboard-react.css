@@ -11,6 +11,17 @@
   stroke: rgba(255, 255, 255, 0.8);
 }
 
+.ct-chart-donut .ct-label, .ct-chart-pie .ct-label {
+    font-size: 18px;
+}
+
+.ct-series-e .ct-area, .ct-series-e .ct-slice-donut-solid, .ct-series-e .ct-slice-pie {
+  fill: #26c6da;
+}
+.ct-series-a .ct-area, .ct-series-a .ct-slice-donut-solid, .ct-series-a .ct-slice-pie {
+    fill: #ffa726;
+}
+
 .ct-label.ct-horizontal.ct-end {
   -webkit-box-align: flex-start;
   -webkit-align-items: flex-start;
@@ -26,6 +37,7 @@
 
 .ct-label {
   color: rgba(255, 255, 255, 0.7);
+  fill: white !important;
 }
 
 .ct-chart-line .ct-label,

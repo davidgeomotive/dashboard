@@ -18,6 +18,7 @@ import {
   conversionsChart,
   conversionsPercentChart,
   conversionsLiftChart,
+  personalizedPieChart,
 } from '../../variables/charts';
 import Card from '../../components/Card/Card';
 import CardHeader from '../../components/Card/CardHeader';
@@ -33,18 +34,16 @@ import Update from '@material-ui/icons/Update';
 import SendIcon from '@material-ui/icons/Send';
 import TocIcon from '@material-ui/icons/Toc';
 import PersonalVideoIcon from '@material-ui/icons/PersonalVideo';
-import { useParams } from 'react-router-dom';
 // import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles(styles);
 
 export default function Site() {
   const classes = useStyles();
-  let { id } = useParams();
 
   return (
     <GridContainer>
-      <GridItem xs={12} sm={6} md={3}>
+      <GridItem xs={12} sm={6} md={6} lg={3}>
         <Card>
           <CardHeader color='info' stats icon>
             <CardIcon color='info'>
@@ -61,7 +60,7 @@ export default function Site() {
           </CardFooter>
         </Card>
       </GridItem>
-      <GridItem xs={12} sm={6} md={3}>
+      <GridItem xs={12} sm={6} md={6} lg={3}>
         <Card>
           <CardHeader color='warning' stats icon>
             <CardIcon color='warning'>
@@ -78,7 +77,7 @@ export default function Site() {
           </CardFooter>
         </Card>
       </GridItem>
-      <GridItem xs={12} sm={6} md={3}>
+      <GridItem xs={12} sm={6} md={6} lg={3}>
         <Card>
           <CardHeader color='success' stats icon>
             <CardIcon color='success'>
@@ -95,7 +94,7 @@ export default function Site() {
           </CardFooter>
         </Card>
       </GridItem>
-      <GridItem xs={12} sm={6} md={3}>
+      <GridItem xs={12} sm={6} md={6} lg={3}>
         <Card>
           <CardHeader color='danger' stats icon>
             <CardIcon color='danger'>
@@ -112,97 +111,140 @@ export default function Site() {
           </CardFooter>
         </Card>
       </GridItem>
-
-      <GridItem xs={12} sm={12} md={3}>
-        <Card chart>
-          <CardHeader color='info'>
-            <ChartistGraph
-              className='ct-chart'
-              data={viewedChart.total}
-              type='Line'
-              options={viewedChart.options}
-              listener={viewedChart.animation}
-            />
-          </CardHeader>
-          <CardBody>
-            <h4 className={classes.cardTitle}>Total Page Views</h4>
-            <p className={classes.cardCategory}>Weekly Views Performance</p>
-          </CardBody>
-          <CardFooter chart>
-            <div className={classes.stats}>
-              <AccessTime /> Just Updated
-            </div>
-          </CardFooter>
-        </Card>
+      <GridItem xs={12} sm={12} md={6} lg={8}>
+        <GridContainer>
+          <GridItem xs={12} sm={12} lg={6} md={12}>
+            <Card chart>
+              <CardHeader color='info'>
+                <ChartistGraph
+                  className='ct-chart'
+                  data={viewedChart.total}
+                  type='Line'
+                  options={viewedChart.options}
+                  listener={viewedChart.animation}
+                />
+              </CardHeader>
+              <CardBody>
+                <h4 className={classes.cardTitle}>Total Page Views</h4>
+                <p className={classes.cardCategory}>Weekly Views Performance</p>
+              </CardBody>
+              <CardFooter chart>
+                <div className={classes.stats}>
+                  <AccessTime /> Just Updated
+                </div>
+              </CardFooter>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} lg={6} md={12}>
+            <Card chart>
+              <CardHeader color='warning'>
+                <ChartistGraph
+                  className='ct-chart'
+                  data={sendChart.total}
+                  type='Bar'
+                  options={sendChart.options}
+                  listener={sendChart.animation}
+                />
+              </CardHeader>
+              <CardBody>
+                <h4 className={classes.cardTitle}>Total Content Sent</h4>
+                <p className={classes.cardCategory}>Weekly Send Performance</p>
+              </CardBody>
+              <CardFooter chart>
+                <div className={classes.stats}>
+                  <AccessTime /> Just Updated
+                </div>
+              </CardFooter>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} lg={6} md={12}>
+            <Card chart>
+              <CardHeader color='success'>
+                <ChartistGraph
+                  className='ct-chart'
+                  data={baselineChart.total}
+                  type='Bar'
+                  options={baselineChart.options}
+                  responsiveOptions={baselineChart.responsiveOptions}
+                  listener={baselineChart.animation}
+                />
+              </CardHeader>
+              <CardBody>
+                <h4 className={classes.cardTitle}>Total Baseline Content</h4>
+                <p className={classes.cardCategory}>Weekly Baseline Content Performance</p>
+              </CardBody>
+              <CardFooter chart>
+                <div className={classes.stats}>
+                  <AccessTime /> Just Updated
+                </div>
+              </CardFooter>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} lg={6} md={12}>
+            <Card chart>
+              <CardHeader color='danger'>
+                <ChartistGraph
+                  className='ct-chart'
+                  data={personalizedContentChart.data}
+                  type='Line'
+                  options={personalizedContentChart.options}
+                  listener={personalizedContentChart.animation}
+                />
+              </CardHeader>
+              <CardBody>
+                <h4 className={classes.cardTitle}>Total Personalized Content</h4>
+                <p className={classes.cardCategory}>Weekly Content Performance</p>
+              </CardBody>
+              <CardFooter chart>
+                <div className={classes.stats}>
+                  <AccessTime /> updated 2 min ago
+                </div>
+              </CardFooter>
+            </Card>
+          </GridItem>
+        </GridContainer>
+      </GridItem>
+      <GridItem xs={12} sm={12} md={6} lg={4}>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card chart>
+              <CardHeader color='primary'>
+                <ChartistGraph
+                  className='ct-chart ct-square'
+                  data={personalizedPieChart.data}
+                  options={personalizedPieChart.options}
+                  type='Pie'
+                />
+              </CardHeader>
+              <CardBody>
+                <h4 className={classes.cardTitle}>Total Personalized Content Views</h4>
+                <p className={classes.cardCategory}>
+                  <span className={`${classes.first} ${classes.legend}`} /> First
+                </p>
+                <p className={classes.cardCategory}>
+                  <span className={`${classes.buyer} ${classes.legend}`} /> Buyer
+                </p>
+                <p className={classes.cardCategory}>
+                  <span className={`${classes.comparer} ${classes.legend}`} /> Comparer
+                </p>
+                <p className={classes.cardCategory}>
+                  <span className={`${classes.researcher} ${classes.legend}`} /> Researcher
+                </p>
+                <p className={classes.cardCategory}>
+                  <span className={`${classes.inspirational} ${classes.legend}`} /> Inspirational
+                </p>
+              </CardBody>
+              <CardFooter chart>
+                <div className={classes.stats}>
+                  <AccessTime /> Just Updated
+                </div>
+              </CardFooter>
+            </Card>
+          </GridItem>
+        </GridContainer>
       </GridItem>
 
-      <GridItem xs={12} sm={12} md={3}>
-        <Card chart>
-          <CardHeader color='warning'>
-            <ChartistGraph
-              className='ct-chart'
-              data={sendChart.total}
-              type='Bar'
-              options={sendChart.options}
-              listener={sendChart.animation}
-            />
-          </CardHeader>
-          <CardBody>
-            <h4 className={classes.cardTitle}>Total Content Sent</h4>
-            <p className={classes.cardCategory}>Weekly Send Performance</p>
-          </CardBody>
-          <CardFooter chart>
-            <div className={classes.stats}>
-              <AccessTime /> Just Updated
-            </div>
-          </CardFooter>
-        </Card>
-      </GridItem>
-      <GridItem xs={12} sm={12} md={3}>
-        <Card chart>
-          <CardHeader color='success'>
-            <ChartistGraph
-              className='ct-chart'
-              data={baselineChart.total}
-              type='Bar'
-              options={baselineChart.options}
-              responsiveOptions={baselineChart.responsiveOptions}
-              listener={baselineChart.animation}
-            />
-          </CardHeader>
-          <CardBody>
-            <h4 className={classes.cardTitle}>Total Baseline Content</h4>
-            <p className={classes.cardCategory}>Weekly Baseline Content Performance</p>
-          </CardBody>
-          <CardFooter chart>
-            <div className={classes.stats}>
-              <AccessTime /> Just Updated
-            </div>
-          </CardFooter>
-        </Card>
-      </GridItem>
-      <GridItem xs={12} sm={12} md={3}>
-        <Card chart>
-          <CardHeader color='danger'>
-            <ChartistGraph
-              className='ct-chart'
-              data={personalizedContentChart.data}
-              type='Line'
-              options={personalizedContentChart.options}
-              listener={personalizedContentChart.animation}
-            />
-          </CardHeader>
-          <CardBody>
-            <h4 className={classes.cardTitle}>Total Personalized Content</h4>
-            <p className={classes.cardCategory}>Weekly Content Performance</p>
-          </CardBody>
-          <CardFooter chart>
-            <div className={classes.stats}>
-              <AccessTime /> updated 2 min ago
-            </div>
-          </CardFooter>
-        </Card>
-      </GridItem>
+
       <GridItem xs={12} sm={12} md={12}>
         <CustomTabs
           title='User type:'

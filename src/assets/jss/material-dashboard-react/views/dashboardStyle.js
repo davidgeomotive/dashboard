@@ -19,17 +19,31 @@ const dashboardStyle = {
     justifyContent: 'space-between',
     flexWrap: 'wrap',
   },
-  cardDanger: {
+  legend: {
     width: '10px',
     height: '10px',
-    backgroundColor: '#f05b4f',
     display: 'inline-block',
   },
-  cardWarning: {
-    width: '10px',
-    height: '10px',
+  first: {
+    backgroundColor: '#EFA628',
+  },
+  buyer: {
+    backgroundColor: '#EB5A4F',
+  },
+  comparer: {
+    backgroundColor: '#F3C63D',
+  },
+  researcher: {
+    backgroundColor: '#D17905',
+  },
+  inspirational: {
+    backgroundColor: '#5EC6DA',
+  },
+  danger: {
+    backgroundColor: '#f05b4f',
+  },
+  warning: {
     backgroundColor: '#f4c63d',
-    display: 'inline-block',
   },
   iframe: {
     width: '100%',

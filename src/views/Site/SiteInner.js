@@ -112,7 +112,7 @@ export default function Site({
           <CardBody>
             <h4 className={classes.cardTitle}>Conversions</h4>
             <p className={classes.cardCategory}>
-              Conversions Baseline <span className={classes.cardDanger} />
+              Conversions Baseline <span className={`${classes.danger} ${classes.legend}`} />
             </p>
           </CardBody>
           <CardFooter chart>
@@ -137,10 +137,10 @@ export default function Site({
             <h4 className={classes.cardTitle}>Conversions %</h4>
             <div className={classes.cardSubContainer}>
               <p className={classes.cardCategory}>
-                Conversions Baseline % <span className={classes.cardDanger} />
+                Conversions Baseline % <span className={`${classes.danger} ${classes.legend}`} />
               </p>
               <p className={classes.cardCategory}>
-                Conversions Personalized % <span className={classes.cardWarning} />
+                Conversions Personalized % <span className={`${classes.warning} ${classes.legend}`} />
               </p>
             </div>
           </CardBody>
