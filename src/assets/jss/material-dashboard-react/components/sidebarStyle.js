@@ -87,7 +87,7 @@ const sidebarStyle = theme => ({
     textDecoration: "none",
     backgroundColor: "transparent",
     "&,&:hover": {
-      color: whiteColor
+      color: blackColor
     }
   },
   logoImage: {
@@ -98,8 +98,8 @@ const sidebarStyle = theme => ({
     marginRight: "15px"
   },
   img: {
-    width: "75%",
-    top: "22px",
+    width: "80%",
+    top: "10px",
     position: "absolute",
     verticalAlign: "middle",
     border: "0"
@@ -121,7 +121,7 @@ const sidebarStyle = theme => ({
       height: "100%",
       content: '""',
       display: "block",
-      background: blackColor,
+      background: whiteColor,
       opacity: ".8"
     }
   },
@@ -139,7 +139,7 @@ const sidebarStyle = theme => ({
     display: "block",
     textDecoration: "none",
     "&:hover,&:focus,&:visited,&": {
-      color: whiteColor
+      color: blackColor
     }
   },
   itemLink: {
@@ -151,6 +151,7 @@ const sidebarStyle = theme => ({
     display: "block",
     padding: "10px 15px",
     backgroundColor: "transparent",
+    color: blackColor,
     ...defaultFont
   },
   itemIcon: {
@@ -162,22 +163,15 @@ const sidebarStyle = theme => ({
     marginRight: "15px",
     textAlign: "center",
     verticalAlign: "middle",
-    color: "rgba(" + hexToRgb(whiteColor) + ", 0.8)"
-  },
-  itemIconRTL: {
-    marginRight: "3px",
-    marginLeft: "15px",
-    float: "right"
+    color: "rgba(" + hexToRgb(blackColor) + ", 0.8)"
   },
   itemText: {
     ...defaultFont,
     margin: "0",
     lineHeight: "30px",
     fontSize: "14px",
-    color: whiteColor
-  },
-  itemTextRTL: {
-    textAlign: "right"
+    color: blackColor,
+    textTransform: "uppercase"
   },
   whiteFont: {
     color: whiteColor
@@ -214,24 +208,8 @@ const sidebarStyle = theme => ({
   },
   green: {
     backgroundColor: successColor[0],
-    boxShadow:
-      "0 12px 20px -10px rgba(" +
-      hexToRgb(successColor[0]) +
-      ",.28), 0 4px 20px 0 rgba(" +
-      hexToRgb(blackColor) +
-      ",.12), 0 7px 8px -5px rgba(" +
-      hexToRgb(successColor[0]) +
-      ",.2)",
     "&:hover,&:focus": {
       backgroundColor: successColor[0],
-      boxShadow:
-        "0 12px 20px -10px rgba(" +
-        hexToRgb(successColor[0]) +
-        ",.28), 0 4px 20px 0 rgba(" +
-        hexToRgb(blackColor) +
-        ",.12), 0 7px 8px -5px rgba(" +
-        hexToRgb(successColor[0]) +
-        ",.2)"
     }
   },
   orange: {

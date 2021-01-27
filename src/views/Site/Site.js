@@ -33,12 +33,14 @@ import Update from '@material-ui/icons/Update';
 import SendIcon from '@material-ui/icons/Send';
 import TocIcon from '@material-ui/icons/Toc';
 import PersonalVideoIcon from '@material-ui/icons/PersonalVideo';
-import Hidden from '@material-ui/core/Hidden';
+import { useParams } from 'react-router-dom';
+// import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles(styles);
 
 export default function Site() {
   const classes = useStyles();
+  let { id } = useParams();
 
   return (
     <GridContainer>
@@ -309,41 +311,42 @@ export default function Site() {
           ]}
         />
       </GridItem>
+      {/*SITE PREVIEW*/}
 
-      <GridItem xs={12} sm={12} md={12}>
-        <Card plain>
-          <CardHeader plain color='primary'>
-            <h4 className={classes.cardTitleWhite}>Villeroy & Boch</h4>
-            <p className={classes.cardCategoryWhite}>Site preview</p>
-          </CardHeader>
-          <CardBody>
-            <Hidden only={['sm', 'xs']}>
-              <iframe
-                className={classes.iframe}
-                src='https://www.villeroy-boch.co.uk/shop/home'
-                title='Team iframe'
-              >
-                <p>Your browser does not support iframes.</p>
-              </iframe>
-            </Hidden>
-            <Hidden only={['lg', 'md', 'xl']}>
-              <GridItem xs={12} sm={12} md={6}>
-                <h5>
-                  The sites are visible on Desktop mode inside an iframe. Since the iframe is not
-                  working on Mobile and Tablets please visit the site on their original. Check the{' '}
-                  <a
-                    href='https://www.villeroy-boch.co.uk/shop/home'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    Villeroy & Boch
-                  </a>
-                </h5>
-              </GridItem>
-            </Hidden>
-          </CardBody>
-        </Card>
-      </GridItem>
+      {/*<GridItem xs={12} sm={12} md={12}>*/}
+      {/*  <Card plain>*/}
+      {/*    <CardHeader plain color='primary'>*/}
+      {/*      <h4 className={classes.cardTitleWhite}>Villeroy & Boch</h4>*/}
+      {/*      <p className={classes.cardCategoryWhite}>Site preview</p>*/}
+      {/*    </CardHeader>*/}
+      {/*    <CardBody>*/}
+      {/*      <Hidden only={['sm', 'xs']}>*/}
+      {/*        <iframe*/}
+      {/*          className={classes.iframe}*/}
+      {/*          src='https://www.villeroy-boch.co.uk/shop/home'*/}
+      {/*          title='Team iframe'*/}
+      {/*        >*/}
+      {/*          <p>Your browser does not support iframes.</p>*/}
+      {/*        </iframe>*/}
+      {/*      </Hidden>*/}
+      {/*      <Hidden only={['lg', 'md', 'xl']}>*/}
+      {/*        <GridItem xs={12} sm={12} md={6}>*/}
+      {/*          <h5>*/}
+      {/*            The sites are visible on Desktop mode inside an iframe. Since the iframe is not*/}
+      {/*            working on Mobile and Tablets please visit the site on their original. Check the{' '}*/}
+      {/*            <a*/}
+      {/*              href='https://www.villeroy-boch.co.uk/shop/home'*/}
+      {/*              target='_blank'*/}
+      {/*              rel='noopener noreferrer'*/}
+      {/*            >*/}
+      {/*              Villeroy & Boch*/}
+      {/*            </a>*/}
+      {/*          </h5>*/}
+      {/*        </GridItem>*/}
+      {/*      </Hidden>*/}
+      {/*    </CardBody>*/}
+      {/*  </Card>*/}
+      {/*</GridItem>*/}
     </GridContainer>
   );
 }

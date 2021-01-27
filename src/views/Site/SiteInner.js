@@ -43,10 +43,6 @@ export default function Site({
           </CardHeader>
           <CardBody>
             <h4 className={classes.cardTitle}>Detected</h4>
-            <p className={classes.cardCategory}>
-              <span className={classes.successText}>Static Data Simulator Factor</span>{' '}
-              {detectedData.simulatedData}
-            </p>
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>
@@ -69,10 +65,10 @@ export default function Site({
           </CardHeader>
           <CardBody>
             <h4 className={classes.cardTitle}>Send</h4>
-            <p className={classes.cardCategory}>
-              <span className={classes.successText}>Static Data Simulator Factor</span>{' '}
-              {sendData.simulatedData}
-            </p>
+            {/*<p className={classes.cardCategory}>*/}
+            {/*  <span className={classes.successText}>Static Data Simulator Factor</span>{' '}*/}
+            {/*  {sendData.simulatedData}*/}
+            {/*</p>*/}
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>
@@ -94,10 +90,6 @@ export default function Site({
           </CardHeader>
           <CardBody>
             <h4 className={classes.cardTitle}>Viewed</h4>
-            <p className={classes.cardCategory}>
-              <span className={classes.successText}>Static Data Simulator Factor</span>{' '}
-              {viewedData.simulatedData}
-            </p>
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>

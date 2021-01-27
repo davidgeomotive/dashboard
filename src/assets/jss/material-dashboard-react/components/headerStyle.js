@@ -42,7 +42,7 @@ const headerStyle = () => ({
     lineHeight: "30px",
     fontSize: "18px",
     borderRadius: "3px",
-    textTransform: "capitalize",
+    textTransform: "uppercase",
     color: "inherit",
     margin: "0",
     "&:hover,&:focus": {

@@ -14,14 +14,20 @@ import FixedPlugin from 'components/FixedPlugin/FixedPlugin.js';
 import routes from 'routes.js';
 
 import styles from 'assets/jss/material-dashboard-react/layouts/adminStyle.js';
-import logo from 'assets/img/ax-semantics-logo.png';
+import logo from 'assets/img/ax.png';
 import Site from '../views/Site/Site';
 
 let ps;
 
+const breadcrumbNameMap = {
+  '/team': 'Team',
+  '/team/site': 'Site',
+  '/user': 'User',
+};
+
 const switchRoutes = (
   <Switch>
-    <Route path='/admin/team/site' component={Site} />
+    <Route path='/admin/team/:id' children={<Site />} />
     {routes.map((prop, key) => {
       if (prop.layout === '/admin') {
         return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;

@@ -228,7 +228,7 @@ const buttonStyle = {
   },
   simple: {
     "&,&:focus,&:hover": {
-      color: whiteColor,
+      color: blackColor,
       background: "transparent",
       boxShadow: "none"
     },

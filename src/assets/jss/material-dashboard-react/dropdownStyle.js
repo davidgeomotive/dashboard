@@ -67,7 +67,7 @@ const dropdownStyle = theme => ({
         padding: "0px !important",
         backgroundColor: "transparent !important",
         "& ul li": {
-          color: whiteColor + " !important",
+          color: blackColor + " !important",
           margin: "10px 15px 0!important",
           padding: "10px 15px !important",
           "&:hover": {
@@ -115,7 +115,7 @@ const dropdownStyle = theme => ({
     minHeight: "unset",
     "&:hover": {
       backgroundColor: primaryColor[0],
-      color: whiteColor,
+      color: blackColor,
       ...primaryBoxShadow
     }
   }
