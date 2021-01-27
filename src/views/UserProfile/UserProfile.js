@@ -147,7 +147,7 @@ export default function UserProfile() {
               </GridContainer>
             </CardBody>
             <CardFooter>
-              <Button color="primary">Update Profile</Button>
+              <Button color="success">Update Profile</Button>
             </CardFooter>
           </Card>
         </GridItem>
@@ -164,7 +164,7 @@ export default function UserProfile() {
               <p className={classes.description}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, amet consequatur cum fugit ipsa iure omnis quam reprehenderit tenetur. Accusantium aliquam dolores doloribus maiores qui soluta? Hic placeat praesentium sapiente?
               </p>
-              <Button color="primary" round>
+              <Button color="success" round>
                 Follow
               </Button>
             </CardBody>
