@@ -32,7 +32,7 @@ export default function Site({
     <GridContainer>
       <GridItem xs={12} sm={12} md={4}>
         <Card chart>
-          <CardHeader color='rose'>
+          <CardHeader color='danger'>
             <ChartistGraph
               className='ct-chart'
               data={detectedData}

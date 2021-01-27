@@ -19,12 +19,6 @@ import Site from '../views/Site/Site';
 
 let ps;
 
-const breadcrumbNameMap = {
-  '/team': 'Team',
-  '/team/site': 'Site',
-  '/user': 'User',
-};
-
 const switchRoutes = (
   <Switch>
     <Route path='/admin/team/:id' children={<Site />} />

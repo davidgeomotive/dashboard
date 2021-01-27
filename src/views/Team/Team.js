@@ -31,7 +31,7 @@ export default function Team() {
         onClick={() => history.push('/admin/team/villeroy-boch.co.uk')}
       >
         <Card site>
-          <CardHeader plain color='success'>
+          <CardHeader plain color='primary'>
             <h4 className={classes.cardTitleWhite}>Villeroy & Boch</h4>
             <p className={classes.cardCategoryWhite}>villeroy-boch.co.uk</p>
           </CardHeader>
@@ -85,7 +85,7 @@ export default function Team() {
       </GridItem>
       <GridItem xs={12} sm={12} lg={6} onClick={() => history.push('/admin/team/villeroy-boch.de')}>
         <Card site>
-          <CardHeader plain color='success'>
+          <CardHeader plain color='primary'>
             <h4 className={classes.cardTitleWhite}>Villeroy & Boch</h4>
             <p className={classes.cardCategoryWhite}>villeroy-boch.de</p>
           </CardHeader>

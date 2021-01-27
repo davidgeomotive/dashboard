@@ -14,7 +14,7 @@ ReactDOM.render(
   <Router history={hist}>
     <Switch>
       <Route path="/admin" component={Admin} />
-      <Redirect exact from="/" to="/admin/dashboard" />
+      <Redirect exact from="/" to="/admin/team" />
     </Switch>
   </Router>,
   document.getElementById("root")

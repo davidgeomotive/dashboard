@@ -12,28 +12,14 @@ import Menu from '@material-ui/icons/Menu';
 // core components
 import AdminNavbarLinks from './AdminNavbarLinks.js';
 import Button from 'components/CustomButtons/Button.js';
-import { useLocation } from 'react-router-dom';
 
 import styles from 'assets/jss/material-dashboard-react/components/headerStyle.js';
+import SimpleBreadcrumbs from '../Breadcrumbs/SimpleBreadcrumbs';
 
 const useStyles = makeStyles(styles);
 
 export default function Header(props) {
   const classes = useStyles();
-  const location = useLocation();
-
-  const getLastItem = (thePath) => thePath.substring(thePath.lastIndexOf('/') + 1);
-
-  // function makeBrand() {
-  //   var name;
-  //   props.routes.map((prop) => {
-  //     if (window.location.href.indexOf(prop.layout + prop.path) !== -1) {
-  //       name = prop.name;
-  //     }
-  //     return null;
-  //   });
-  //   return name;
-  // }
 
   const { color } = props;
   const appBarClasses = classNames({
@@ -43,9 +29,8 @@ export default function Header(props) {
     <AppBar className={classes.appBar + appBarClasses}>
       <Toolbar className={classes.container}>
         <div className={classes.flex}>
-          {/* Here we create navbar brand, based on route name */}
-          <Button color='transparent' href='#' className={classes.title}>
-            {getLastItem(location.pathname)}
+          <Button color='transparent' className={classes.title}>
+            <SimpleBreadcrumbs />
           </Button>
         </div>
         <Hidden smDown implementation='css'>
