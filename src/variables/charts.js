@@ -256,6 +256,8 @@ const conversionsLiftChart = {
     series: [[258, 361, 308, 306, 258, 207, 154]],
   },
   options: {
+    low: 0,
+    high: 800,
     axisY: {
       offset: 50,
       labelInterpolationFnc: function (value) {
@@ -297,6 +299,7 @@ const personalizedContentChart = {
     series: [[1441, 1831, 1780, 1680, 1589, 1182, 1012]],
   },
   options: {
+    showArea: true,
     low: 0,
     high: 2500,
     lineSmooth: Chartist.Interpolation.simple(),
@@ -545,6 +548,8 @@ const viewedChart = {
     simulatedData: '35%',
   },
   options: {
+    low: 0,
+
     showArea: true,
     chartPadding: {
       top: 0,

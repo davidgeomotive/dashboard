@@ -60,7 +60,7 @@ export default function Team() {
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>
                 <Card chart>
-                  <CardHeader color='info'>
+                  <CardHeader color='warning'>
                     <ChartistGraph
                       className='ct-chart'
                       data={viewedChart.total}
@@ -114,7 +114,7 @@ export default function Team() {
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>
                 <Card chart>
-                  <CardHeader color='info'>
+                  <CardHeader color='warning'>
                     <ChartistGraph
                       className='ct-chart'
                       data={viewedChart.total}

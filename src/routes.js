@@ -1,9 +1,9 @@
 // @material-ui/icons
-import Person from '@material-ui/icons/Person';
 import GroupIcon from '@material-ui/icons/Group';
 // core components/views for Admin layout
-import UserProfile from 'views/UserProfile/UserProfile.js';
 import Team from 'views/Team/Team.js';
+// import Person from '@material-ui/icons/Person';
+// import UserProfile from 'views/UserProfile/UserProfile.js';
 // import Dashboard from '@material-ui/icons/Dashboard';
 // import LibraryBooks from '@material-ui/icons/LibraryBooks';
 // import TableList from 'views/TableList/TableList.js';
@@ -32,13 +32,13 @@ const dashboardRoutes = [
     component: Team,
     layout: '/admin',
   },
-  {
-    path: '/user',
-    name: 'User Profile',
-    icon: Person,
-    component: UserProfile,
-    layout: '/admin',
-  },
+  // {
+  //   path: '/user',
+  //   name: 'User Profile',
+  //   icon: Person,
+  //   component: UserProfile,
+  //   layout: '/admin',
+  // },
   // {
   //   path: '/table',
   //   name: 'Table List',

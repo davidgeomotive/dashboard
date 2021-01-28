@@ -45,8 +45,8 @@ export default function Site() {
     <GridContainer>
       <GridItem xs={12} sm={6} md={6} lg={3}>
         <Card>
-          <CardHeader color='info' stats icon>
-            <CardIcon color='info'>
+          <CardHeader color='warning' stats icon>
+            <CardIcon color='warning'>
               <VisibilityIcon />
             </CardIcon>
             <p className={classes.cardCategory}>Page Views</p>
@@ -62,8 +62,8 @@ export default function Site() {
       </GridItem>
       <GridItem xs={12} sm={6} md={6} lg={3}>
         <Card>
-          <CardHeader color='warning' stats icon>
-            <CardIcon color='warning'>
+          <CardHeader color='info' stats icon>
+            <CardIcon color='info'>
               <SendIcon />
             </CardIcon>
             <p className={classes.cardCategory}>Content Send</p>
@@ -115,9 +115,9 @@ export default function Site() {
         <GridContainer>
           <GridItem xs={12} sm={12} lg={6} md={12}>
             <Card chart>
-              <CardHeader color='info'>
+              <CardHeader color='white'>
                 <ChartistGraph
-                  className='ct-chart'
+                  className='ct-chart warning white'
                   data={viewedChart.total}
                   type='Line'
                   options={viewedChart.options}
@@ -135,33 +135,35 @@ export default function Site() {
               </CardFooter>
             </Card>
           </GridItem>
+
           <GridItem xs={12} sm={12} lg={6} md={12}>
             <Card chart>
-              <CardHeader color='warning'>
+              <CardHeader color='white'>
                 <ChartistGraph
-                  className='ct-chart'
-                  data={sendChart.total}
-                  type='Bar'
-                  options={sendChart.options}
-                  listener={sendChart.animation}
+                  className='ct-chart danger white'
+                  data={personalizedContentChart.data}
+                  type='Line'
+                  options={personalizedContentChart.options}
+                  listener={personalizedContentChart.animation}
                 />
               </CardHeader>
               <CardBody>
-                <h4 className={classes.cardTitle}>Total Content Sent</h4>
-                <p className={classes.cardCategory}>Weekly Send Performance</p>
+                <h4 className={classes.cardTitle}>Total Personalized Content</h4>
+                <p className={classes.cardCategory}>Weekly Content Performance</p>
               </CardBody>
               <CardFooter chart>
                 <div className={classes.stats}>
-                  <AccessTime /> Just Updated
+                  <AccessTime /> updated 2 min ago
                 </div>
               </CardFooter>
             </Card>
           </GridItem>
+
           <GridItem xs={12} sm={12} lg={6} md={12}>
             <Card chart>
-              <CardHeader color='success'>
+              <CardHeader color='white'>
                 <ChartistGraph
-                  className='ct-chart'
+                  className='ct-chart success white'
                   data={baselineChart.total}
                   type='Bar'
                   options={baselineChart.options}
@@ -180,24 +182,25 @@ export default function Site() {
               </CardFooter>
             </Card>
           </GridItem>
+
           <GridItem xs={12} sm={12} lg={6} md={12}>
             <Card chart>
-              <CardHeader color='danger'>
+              <CardHeader color='white'>
                 <ChartistGraph
-                  className='ct-chart'
-                  data={personalizedContentChart.data}
-                  type='Line'
-                  options={personalizedContentChart.options}
-                  listener={personalizedContentChart.animation}
+                  className='ct-chart info white'
+                  data={sendChart.total}
+                  type='Bar'
+                  options={sendChart.options}
+                  listener={sendChart.animation}
                 />
               </CardHeader>
               <CardBody>
-                <h4 className={classes.cardTitle}>Total Personalized Content</h4>
-                <p className={classes.cardCategory}>Weekly Content Performance</p>
+                <h4 className={classes.cardTitle}>Total Content Sent</h4>
+                <p className={classes.cardCategory}>Weekly Send Performance</p>
               </CardBody>
               <CardFooter chart>
                 <div className={classes.stats}>
-                  <AccessTime /> updated 2 min ago
+                  <AccessTime /> Just Updated
                 </div>
               </CardFooter>
             </Card>
@@ -208,7 +211,7 @@ export default function Site() {
         <GridContainer>
           <GridItem xs={12} sm={12} md={12}>
             <Card chart>
-              <CardHeader color='primary'>
+              <CardHeader color='white'>
                 <ChartistGraph
                   className='ct-chart ct-square'
                   data={personalizedPieChart.data}

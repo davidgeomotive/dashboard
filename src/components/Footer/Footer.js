@@ -18,17 +18,17 @@ export default function Footer(props) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
-              <a href='#cockpit' className={classes.block}>
+              <a href='#' className={classes.block}>
                 Cockpit
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href='#docs' className={classes.block}>
+              <a href='#' className={classes.block}>
                 Docs
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href='#support' className={classes.block}>
+              <a href='#' className={classes.block}>
                 Support
               </a>
             </ListItem>

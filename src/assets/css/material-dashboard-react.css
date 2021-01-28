@@ -4,6 +4,30 @@
   stroke-dasharray: 2px;
 }
 
+.ct-chart.info .ct-line, .ct-chart.info .ct-point, .ct-chart.info .ct-bar, .ct-chart.info .ct-grid {
+  stroke: #26c6da;
+}
+
+.ct-chart.danger .ct-line, .ct-chart.danger .ct-point, .ct-chart.danger .ct-bar, .ct-chart.danger .ct-grid {
+  stroke: #ef5350;
+}
+
+.ct-chart.success .ct-line, .ct-chart.success .ct-point, .ct-chart.success .ct-bar, .ct-chart.success .ct-grid {
+  stroke: #66bb6a;
+}
+
+.ct-chart.white .ct-label {
+   color: dimgray;
+}
+
+.ct-chart.warning .ct-line, .ct-chart.warning .ct-point, .ct-chart.warning .ct-bar, .ct-chart.warning .ct-grid {
+  stroke: #ffa726;
+}
+
+.ct-chart.white .ct-area {
+  fill: dimgray;
+}
+
 .ct-series-a .ct-point,
 .ct-series-a .ct-line,
 .ct-series-a .ct-bar,

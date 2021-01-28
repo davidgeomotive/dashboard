@@ -25,7 +25,7 @@ export default function Sidebar(props) {
     return window.location.href.indexOf(routeName) > -1 ? true : false;
   }
 
-  const { color, logo, image, logoText, routes } = props;
+  const { logo, logoText, routes } = props;
   var links = (
     <List className={classes.list}>
       {routes.map((prop, key) => {
@@ -34,11 +34,11 @@ export default function Sidebar(props) {
         if (prop.path === '/upgrade-to-pro') {
           activePro = classes.activePro + ' ';
           listItemClasses = classNames({
-            [' ' + classes[color]]: true,
+            [' ' + classes.green]: true,
           });
         } else {
           listItemClasses = classNames({
-            [' ' + classes[color]]: activeRoute(prop.layout + prop.path),
+            [' ' + classes.green]: activeRoute(prop.layout + prop.path),
           });
         }
         const whiteFontClasses = classNames({
@@ -110,9 +110,7 @@ export default function Sidebar(props) {
             <AdminNavbarLinks />
             {links}
           </div>
-          {image !== undefined ? (
-            <div className={classes.background} style={{ backgroundImage: 'url(' + image + ')' }} />
-          ) : null}
+          <div className={classes.background} />
         </Drawer>
       </Hidden>
       <Hidden smDown implementation='css'>
@@ -128,9 +126,7 @@ export default function Sidebar(props) {
         >
           {brand}
           <div className={classes.sidebarWrapper}>{links}</div>
-          {image !== undefined ? (
-            <div className={classes.background} style={{ backgroundImage: 'url(' + image + ')' }} />
-          ) : null}
+          <div className={classes.background} />
         </Drawer>
       </Hidden>
     </div>
@@ -142,7 +138,6 @@ Sidebar.propTypes = {
   handleDrawerToggle: PropTypes.func,
   bgColor: PropTypes.oneOf(['purple', 'blue', 'green', 'orange', 'red']),
   logo: PropTypes.string,
-  image: PropTypes.string,
   logoText: PropTypes.string,
   routes: PropTypes.arrayOf(PropTypes.object),
   open: PropTypes.bool,

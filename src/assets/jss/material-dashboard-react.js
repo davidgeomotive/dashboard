@@ -106,6 +106,7 @@ const successBoxShadow = {
     hexToRgb(successColor[0]) +
     ",.4)"
 };
+
 const warningBoxShadow = {
   boxShadow:
     "0 4px 20px 0 rgba(" +
@@ -129,6 +130,11 @@ const roseBoxShadow = {
     ",.14), 0 7px 10px -5px rgba(" +
     hexToRgb(roseColor[0]) +
     ",.4)"
+};
+
+const whiteCardHeader = {
+  background: "white",
+  ...boxShadow
 };
 
 const warningCardHeader = {
@@ -264,6 +270,7 @@ export {
   warningBoxShadow,
   dangerBoxShadow,
   roseBoxShadow,
+  whiteCardHeader,
   warningCardHeader,
   successCardHeader,
   dangerCardHeader,
